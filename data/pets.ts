@@ -87,7 +87,7 @@ export const pets: Pet[] = [
         shelterId: "nadezhda"
     },
     {
-        id: 8, name: "Скиттер", type: "cat", media: { type: "image", src: "@/public/cats/cat8.jpg", alt: "Кот Скиттер" },
+        id: 8, name: "Скиттер", type: "cat", media: { type: "image", src: "/cats/cat8.jpg", alt: "Кот Скиттер" },
         description: "",
         age: "",
         vaccinated: false,
