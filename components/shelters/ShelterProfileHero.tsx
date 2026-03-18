@@ -16,6 +16,7 @@ export default function ShelterProfileHero({ shelter }: ShelterProfileHeroProps)
             <div className="absolute bottom-20 left-1/2 z-20 -translate-x-1/2 sm:bottom-6 sm:right-8 sm:translate-x-0">
             <div className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-white text-sm backdrop-blur">
             </div>
+            <div></div>
             </div>
         </div>
     )
