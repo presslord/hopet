@@ -87,7 +87,7 @@ export const pets: Pet[] = [
         shelterId: "nadezhda"
     },
     {
-        id: 8, name: "Скиттер", type: "cat", media: { type: "image", src: "/cats/cat8.jpg", alt: "Кот Скиттер" },
+        id: 8, name: "Скиттер", type: "cat", media: { type: "image", src: "@/public/cats/cat8.jpg", alt: "Кот Скиттер" },
         description: "",
         age: "",
         vaccinated: false,
@@ -97,7 +97,7 @@ export const pets: Pet[] = [
         shelterId: "nadezhda"
     },
     {
-        id: 9, name: "Егор", type: "dog", media: { type: "video", src: "/cat.mp4", alt: "Собак Егор" },
+        id: 9, name: "Егор", type: "dog", media: { type: "image", src: "/dogs/dog1.jpeg", alt: "Собак Егор" },
         description: "",
         age: "",
         vaccinated: false,
@@ -107,7 +107,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 10, name: "Долик", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Долик" },
+        id: 10, name: "Долик", type: "dog", media: { type: "image", src: "/dogs/dog2.jpeg", alt: "Собак Долик" },
         description: "",
         age: "",
         vaccinated: false,
@@ -117,7 +117,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 11, name: "Бибер", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Бибер" },
+        id: 11, name: "Бибер", type: "dog", media: { type: "image", src: "/dogs/dog3.jpeg", alt: "Собак Бибер" },
         description: "",
         age: "",
         vaccinated: false,
@@ -127,7 +127,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 12, name: "Варька", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Варька" },
+        id: 12, name: "Варька", type: "dog", media: { type: "image", src: "/dogs/dog4.jpg", alt: "Собак Варька" },
         description: "",
         age: "",
         vaccinated: false,
@@ -137,7 +137,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 13, name: "Кеша", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Кеша" },
+        id: 13, name: "Кеша", type: "dog", media: { type: "image", src: "/dogs/dog5.jpeg", alt: "Собак Кеша" },
         description: "",
         age: "",
         vaccinated: false,
@@ -147,7 +147,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 14, name: "Буся", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Буся" },
+        id: 14, name: "Буся", type: "dog", media: { type: "image", src: "/dogs/dog6.jpg", alt: "Собак Буся" },
         description: "",
         age: "",
         vaccinated: false,
@@ -157,7 +157,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 15, name: "Саламули", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Саламули" },
+        id: 15, name: "Саламули", type: "dog", media: { type: "image", src: "/dogs/dog7.jpg", alt: "Собак Саламули" },
         description: "",
         age: "",
         vaccinated: false,
@@ -167,7 +167,7 @@ export const pets: Pet[] = [
         shelterId: "lyubov"
     },
     {
-        id: 16, name: "Пхали-сували", type: "dog", media: { type: "image", src: "/cats/cat1.jpg", alt: "Собак Пхали-сували" },
+        id: 16, name: "Пхали-сували", type: "dog", media: { type: "image", src: "/dogs/dog8.jpeg", alt: "Собак Пхали-сували" },
         description: "",
         age: "",
         vaccinated: false,
