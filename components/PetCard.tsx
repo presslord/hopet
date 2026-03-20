@@ -1,5 +1,3 @@
-import { useRouter } from 'next/navigation';
-
 export interface Pet {
     id: number;
     name: string;
@@ -12,9 +10,8 @@ interface PetCardProps {
 }
 
 export default function PetCard({ pet }: PetCardProps) {
-    const router = useRouter();
     return (
-        <div className="group relative cursor-pointer" onClick={() => router.push(`pets/${pet.id}`)}>
+        <a href={"/pets/" + pet.id} className="group relative cursor-pointer">
                 <div className="flex h-full flex-col">
                 <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200 group-hover:opacity-75">
                     {pet.media.type === "video" ? (
@@ -27,6 +24,6 @@ export default function PetCard({ pet }: PetCardProps) {
                 </div>
                 <h3 className="mt-4 min-h-7 text-lg text-gray-700 transition group-hover:text-gray-900">{pet.name}</h3>
         </div>
-    </div>
+    </a>
     );           
 }
