@@ -18,8 +18,8 @@ function DetailItem({ label, value, status = "neutral" }: DetailItemProps) {
     };
     return (
         <div className="flex flex-col p-3 md:p-4 bg-gray-50 rounded-lg">
-            <span className="text-xs md:text-sm text-gray-600 mb-1">{label}</span>
-            <span className={`text-base md:text-xl font-medium ${statusColors[status]}`}>{value}</span>
+            <span className="text-xs md:text-sm text-gray-500 mb-1">{label}</span>
+            <span className={`text-base md:text-lg font-medium ${statusColors[status]}`}>{value}</span>
         </div>
     );
 }
@@ -27,7 +27,7 @@ function DetailItem({ label, value, status = "neutral" }: DetailItemProps) {
 export default function PetDetails( { pet }: PetDetailsProps) {
     
     return (
-        <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 custom-font">
+        <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 custom-font mt-6">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
                 Информация о животном
             </h2>
@@ -36,10 +36,10 @@ export default function PetDetails( { pet }: PetDetailsProps) {
                 <DetailItem label="Приучен к лотку" value={pet.litterTrained ? "Да" : "Нет"} status={pet.litterTrained ? "positive" : "negative"} />
                 <DetailItem label="Стерилизация" value={pet.sterilized ? "Стерилизован" : "Не стерилизован"} status={pet.sterilized ? "positive" : "neutral"} />
                 <DetailItem label="Возраст" value={pet.age} status="neutral" />
+            </div>
                 <div className="mt-4 md:mt-6">
                     <DetailItem label="Состояние здоровья" value={pet.health} status={pet.health === "Здоров" ? "positive" : "neutral"} />
                 </div>
-            </div>
         </div>
     );
 }

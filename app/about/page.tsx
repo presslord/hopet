@@ -6,16 +6,17 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} 
+}
+
 from "@/components/ui/carousel"
 
 export default function Page() {
     return(<>
-          <div className="relative isolate overflow-hidden bg-white pt-12 sm:pt-10 sm:pb-152 shadow-lg rounded-lg border-none ">
+          <div className="relative isolate overflow-hidden bg-white pt-12 sm:py-0 sm:pb-152 shadow-lg rounded-lg border-none ">
         <img src={"photo"} className="absolute inset-0 w-full h-full object-cover -z-10 brightness-50 shadow-lg">
         </img>
         <div className="max-w-2xl ml-6 pb-4 ">
-          <h1 className="text-5xl font-semibold text-gray-200 custom-font">Наша команда</h1>
+          <h1 className="text-5xl font-semibold text-gray-200 custom-font sm:py-10">Наша команда</h1>
         </div>
       </div>
     <Carousel className="mt-5 w-full shadow-xl rounded-2xl bg-white">

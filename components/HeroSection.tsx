@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-      <div className="relative isolate overflow-hidden rounded-xl bg-white px-4 py-16 shadow-lg sm:px-6 sm:py-24 lg:py-64">
+      <div className="relative isolate overflow-hidden rounded-xl bg-white px-4 py-50 shadow-lg sm:px-6 sm:py-24 lg:py-64">
         <video className="absolute inset-0 w-full h-full object-cover -z-10 brightness-50" autoPlay muted loop>
           <source src="/cats-pets.mp4" />
         </video>

@@ -13,8 +13,8 @@ export default function ShelterProfileHero({ shelter }: ShelterProfileHeroProps)
             <div className="absolute left-1/2 top-full z-10 h-28 w-28 -translate-y-1/2 -translate-x-1/2 overflow-hidden rounded-full border-4 border-white shadow-2xl sm:h-36 sm:w-36">
             <Image src={shelter.avatarImage} alt={`Аватар приюта ${shelter.name}`} fill sizes="144px" className="object-cover object-center" />
             </div> 
-            <div className="absolute bottom-20 left-1/2 z-20 -translate-x-1/2 sm:bottom-6 sm:right-8 sm:translate-x-0">
-            <div className="absolute bottom-10 inline-flex rounded-full border -translate-x-1/2 -translate-y-1/2 border-white/10 bg-white/10 px-3 py-1 text-white text-sm backdrop-blur">
+            <div className="absolute bottom-16 left-1/2 sm:left-1 z-20 -translate-x-1/2 sm:bottom-6 sm:right-8 sm:translate-x-0 sm:ml-5">
+            <div className="inline bottom-10 rounded-full border -translate-x-1/2 -translate-y-1/2 border-white/10 bg-white/10 px-3 py-1 text-white text-sm backdrop-blur">
             {shelter.city}
             </div>
             </div>
