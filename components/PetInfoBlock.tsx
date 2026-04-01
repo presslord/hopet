@@ -27,7 +27,7 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
             </div>
             <div className="flex flex-col justify-start p-4 md:p-6 text-4xl">
                 <h1 className="text-gray-900 md-3 md:mb-4">{pet.name}</h1>
-                <p className="text-3xl text-gray-700 md-3 md:mb-4">
+                <p className="text-xl text-gray-700 md-3 md:mb-4">
                     {pet.type === "cat" ? "Кошка" : "Собака"}, {pet.age} год(а)
                 </p>
                 <div className="text-sm md:text-base text-gray-700 text-justify">
