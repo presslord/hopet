@@ -5,12 +5,13 @@ import { useParams } from "next/navigation";
 import Link from "next/link";
 import { pets } from "@/data/pets";
 import PetInfoBlock from "@/components/PetInfoBlock";
+import { shelters } from "@/data/shelters";
 
 export default function PetPage() {
     const params = useParams();
     const petId = Number(params.id);
     const pet = pets.find((p) => p.id === petId);
-
+    const shelter = pet ? shelters.find((item) => item.id === pet.shelterId) : undefined;
     if (!pet) {
         return (
             <div className="max-w-360 mx-auto px-6 py-12">
@@ -27,13 +28,8 @@ export default function PetPage() {
     }
     return (
         <div className="max-w-360 mx-auto">
-            <PetInfoBlock pet={pet} />
+            <PetInfoBlock pet={pet} shelter={shelter} />
             <PetDetails pet={pet} />
-            <div className="custom-font mt-6 bg-white rounded-lg shadow-lg p-6 text-center">
-                <p className="text-xl font-bold text-gray-900 mb-4">Хотите забрать питомца домой?</p>
-                <p className="text-gray-600 mb-6">Свяжитесь с нами для получения дополнительной информации</p>
-                <a className="inline-block bg-gray-800 text-white px-8 py-3 rounded-lg hover:bg-gray-700 transition font-medium" href="/contact">Связаться с приютом</a>
-            </div>
         </div>
     )
 }
