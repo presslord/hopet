@@ -2,6 +2,8 @@ import { Pet } from "@/data/pets";
 import Image from "next/image";
 import Link from "next/link";
 import { Shelter } from "@/data/shelters";
+import ApplicationModal from "@/components/ApplicationModal";
+import { useState } from "react";
 
 interface PetInfoBlockProps {
     pet : Pet;
@@ -9,7 +11,9 @@ interface PetInfoBlockProps {
 }
 
 export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
+    const [isApplicationOpen, setIsApplicationOpen] = useState(false); 
     return (
+        <>
     <div className="bg-white rounded-lg shadow-lg md-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             <div className="aspect-square w-full overflow-hidden rounded-lg bg-gray-200">
@@ -25,16 +29,17 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
                 )}
 
             </div>
-            <div className="flex flex-col justify-start p-4 md:p-6 text-4xl">
-                <h1 className="text-gray-900 md-3 md:mb-4">{pet.name}</h1>
-                <p className="text-xl text-gray-700 md-3 md:mb-4">
+
+            <div className="flex flex-col justify-start p-4 md:p-6">
+                <h1 className="text-2xl md:text-3xl text-gray-900 font-bold mb-1 md:mb-2">{pet.name}</h1>
+                <p className="text-sm md:text-base text-gray-600 md-3 md:mb-4">
                     {pet.type === "cat" ? "Кошка" : "Собака"}, {pet.age} год(а)
                 </p>
-                <div className="text-sm md:text-base text-gray-700 text-justify">
+                <div className="text-sm md:text-base text-gray-700">
                     <p>{pet.description}</p>
                 </div>
                 {shelter && (
-                <div className="mt-5 rounded-2xl bg-gray-50 p-4 md:mt-auto md:pt-6 md:p-5">
+                <div className="mt-5 rounded-3xl bg-gray-50 p-4 md:mt-auto md:pt-6 md:p-5">
                     <div className="flex items-center gap-4">
                         <div className="relative h-16 w-16 overflow-hidden rounded-[100%] bg-gray-100 shadow-2xl">
                             <Image src={shelter.avatarImage} alt={"Shelter avatar"} fill sizes="64px" className="object-cover" />
@@ -47,12 +52,14 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
                     </div>
                     <div className="mt-4 flex flex-col gap-3 sm:flex-row">
                         <Link href={`/shelters/${shelter.id}`} className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-medium text-gray-900 transition hover:bg-gray-100">Перейти в приют</Link>
-                        <button className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-700">Забрать животное</button>
+                        <button type="button" onClick={() => setIsApplicationOpen(true)} className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-700">Забрать животное</button>
                     </div>
                 </div>
             )}
             </div>
         </div>
     </div>
-    );
+    <ApplicationModal isOpen={isApplicationOpen} petName={pet.name} shelterName={shelter?.name} onClose={() => setIsApplicationOpen(false)}/>
+    </>
+   );
 }
