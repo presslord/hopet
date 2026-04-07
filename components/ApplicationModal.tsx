@@ -13,7 +13,7 @@ export default function ApplicationModal({isOpen, petName, shelterName, onClose,
                         <h2 className="mt-1 text-2xl font-bold text-gray-900">Забрать {petName} домой</h2>
                         <p className="mt-2 text-sm leading-6 text-gray-600">Оставьте контакты, и приют {shelterName} с Вами свяжется</p>
                     </div>
-                    <button type="button" onClick={onClose} className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gray-100 text-3xl leading-none text-gray-500 transition hover:bg-gray-200 hover:text-gray-900">&times;</button>
+                    <button type="button" onClick={onClose} className="inline-flex h-10 w-10 items-center justify-center rounded-2xl max-h-8 text-center bg-gray-100 text-3xl leading-none text-gray-500 transition hover:bg-gray-200 hover:text-gray-900">&times;</button>
                 </div>
                 <form className="mt-6 space-y-4">
                     <div>
@@ -30,28 +30,28 @@ export default function ApplicationModal({isOpen, petName, shelterName, onClose,
                     </div>
                     <div>
                         <label htmlFor="application-pet" className="text-sm font-medium">Есть ли у вас домашние животные?</label>
-                        <div className="flex py-3 ms-1">
+                        <div className="flex py-3 ml-1">
                             <input id="application-pet1" type="radio" name="app-pet"></input>
                             <label htmlFor="application-pet1" className="px-2 text-sm font-medium">Да</label>
                         </div>
-                        <div className="flex ms-1">
+                        <div className="flex ml-1">
                             <input id="application-pet2" type="radio" name="app-pet"></input>
-                            <label htmlFor="application-pet2" className="select-none ms-2 text-sm font-medium text-heading">Нет</label>
+                            <label htmlFor="application-pet2" className="ml-2 text-sm font-medium text-heading">Нет</label>
                         </div>
                     </div>
                     <div>
                         <label htmlFor="application-childs" className="text-sm font-medium">Есть ли у вас дети?</label>
-                        <div className="flex py-3 ms-1">
+                        <div className="flex py-3 ml-1">
                             <input id="application-childs1" type="radio" name="app-childs"></input>
                             <label htmlFor="application-childs1" className="px-2 text-sm font-medium">Да</label>
                         </div>
-                        <div className="flex ms-1">
+                        <div className="flex ml-1">
                             <input id="application-childs2" type="radio" name="app-childs"></input>
-                            <label htmlFor="application-childs2" className="select-none ms-2 text-sm font-medium text-heading">Нет</label>
+                            <label htmlFor="application-childs2" className="ml-2 text-sm font-medium text-heading">Нет</label>
                         </div>
                     <div>
                         <label htmlFor="application-comment" className="pt-4 py-2 block text-sm font-medium text-gray-700">Комментарий</label>
-                        <input id="application-comment" name="comment" type="text" placeholder="Дополнительно" className="w-full rounded-2xl border border-gray-200 px-4  py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900" required/>
+                        <input id="application-comment" name="comment" type="text" placeholder="Дополнительно..." className="w-full rounded-2xl border border-gray-200 px-4  py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900" required/>
                     </div>
                     </div>
                     <div className="flex flex-col gap-3 pt-2 sm:flex-row">
