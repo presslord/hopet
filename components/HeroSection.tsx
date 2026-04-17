@@ -5,7 +5,7 @@ export default function Home() {
           <source src="/cats-pets.mp4" />
         </video>
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-3xl font-bold text-white sm:text-5xl">Добро пожаловать в Hopet</h1>
+          <h1 className="text-3xl font-bold text-white sm:text-5xl">Добро пожаловать в Приючу!</h1>
           <p className="mt-3 text-base text-white sm:mt-4 sm:text-lg">Сайт помощи приютам и поиска домов для животных</p>
         </div>
       </div>

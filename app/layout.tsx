@@ -49,7 +49,7 @@ export default function RootLayout({
           <div className="rounded-xl bg-gray-800 px-4 py-6 text-center text-white sm:px-6">
             <p>Сайт помощи приютам и поиска домов для животных</p>
             <p className="mt-2 text-gray-400">Сайт разработан студентами НовГУ</p>
-            <p className="mt-2">{new Date().getFullYear()} Hopet</p>
+            <p className="mt-2">Приючу! {new Date().getFullYear()} </p>
           </div>
         </footer>
         <MobileBottomNav />

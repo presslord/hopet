@@ -11,5 +11,5 @@ export const profile: Profile = {
     lastName: "Карасев",
     city: "Великий Новгород",
     avatar: "/profile/avatar.jpg",
-    volunteerDays: 1000000000
+    volunteerDays: 9
 }

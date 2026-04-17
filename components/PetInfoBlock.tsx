@@ -11,7 +11,7 @@ interface PetInfoBlockProps {
 }
 
 export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
-    const [isApplicationOpen, setIsApplicationOpen] = useState(false); 
+    const [isApplicationOpen, setIsApplicationOpen] = useState(false);
     return (
         <>
     <div className="bg-white rounded-lg shadow-lg md-6">

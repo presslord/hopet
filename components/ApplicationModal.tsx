@@ -1,7 +1,5 @@
 "use client"
 
-import { IBM_Plex_Mono } from "next/font/google";
-
 interface ApplicationModalProps { isOpen: boolean; petName: string; shelterName?: string; onClose: () => void; }
 
 export default function ApplicationModal({isOpen, petName, shelterName, onClose,}: ApplicationModalProps) { if (!isOpen) { return null;}
@@ -13,31 +11,24 @@ export default function ApplicationModal({isOpen, petName, shelterName, onClose,
                     <div>
                         <p className="text-sm font-medium text-gray-800">Заявка</p>
                         <h2 className="mt-1 text-2xl font-bold text-gray-900">Забрать {petName} домой</h2>
-                        <p className="mt-2 text-sm leading-6 text-gray-600">Оставьте контакты, и приют {shelterName} с Вами свяжется</p>
+                        <p className="mt-2 text-sm leading-6 text-gray-600">Заполните заявку, и приют "{shelterName}" с Вами свяжется</p>
                     </div>
                     <button type="button" onClick={onClose} className="inline-flex h-10 w-10 items-center justify-center rounded-2xl sm:max-h-full max-h-8 text-center bg-gray-100 text-3xl leading-none text-gray-500 transition hover:bg-gray-200 hover:text-gray-900">&times;</button>
                 </div>
                 <form className="mt-6 space-y-4">
-                    <div>
-                        <label htmlFor="application-name" className="mb-2 block text-sm font-medium text-gray-700">Ваше имя</label>
-                        <input id="application-name" name="name" type="text" placeholder="Иван" className="w-full rounded-2xl border border-gray-200 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900" required/>
-                    </div>
-                    <div>
-                        <label htmlFor="application-phone" className="mb-2 block text-sm font-medium text-gray-700">Ваш телефон</label>
-                        <input id="application-phone" name="phone" type="phone-number" placeholder="+79999999999" className="w-full rounded-2xl border border-gray-200 px-4  py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900" required/>
-                    </div>
+
                     <div>
                         <label htmlFor="applicatiome-home-type" className="mb-2 block text-sm font-medium text-gray-700">
                             Где будет жить питомец?
                         </label>
                         <select name="home_type" id="application-home-type" className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900">
-                            <option value="house">Чатсный дом</option>
+                            <option value="house">Частный дом</option>
                             <option value="appartment">Квартира</option>
                         </select>
                     </div>
                     <div>
                         <fieldset className="rounded-2xl border border-gray-200 p-4">
-                            <legend className="px-1 text-sm font-medium text-gray-700">Есть ли у Вас домашние животные</legend>
+                            <legend className="px-1 text-sm font-medium text-gray-700">Есть ли у Вас домашние животные?</legend>
                             <div className="flex flex-col gap-3 text-sm text-gray-700">
                                 <label className="flex items-center gap-3">
                                     <input type="radio" name="other_pets" value="yes"/>
@@ -45,14 +36,14 @@ export default function ApplicationModal({isOpen, petName, shelterName, onClose,
                                 </label>
                                 <label className="flex items-center gap-3">
                                     <input type="radio" name="other_pets" value="yes"/>
-                                    <span>Да</span>
+                                    <span>Нет</span>
                                 </label>
                             </div>
                         </fieldset>
                     </div>
                     <div>
                         <fieldset className="rounded-2xl border border-gray-200 p-4">
-                            <legend className="px-1 text-sm font-medium text-gray-700">Есть ли у Вас дети</legend>
+                            <legend className="px-1 text-sm font-medium text-gray-700">Есть ли у Вас дети?</legend>
                             <div className="flex flex-col gap-3 text-sm text-gray-700">
                                 <label className="flex items-center gap-3">
                                     <input type="radio" name="have_childs" value="yes"/>
@@ -60,7 +51,7 @@ export default function ApplicationModal({isOpen, petName, shelterName, onClose,
                                 </label>
                                 <label className="flex items-center gap-3">
                                     <input type="radio" name="have_childs" value="yes"/>
-                                    <span>Да</span>
+                                    <span>Нет</span>
                                 </label>
                             </div>
                         </fieldset>
