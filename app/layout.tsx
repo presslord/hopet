@@ -5,6 +5,10 @@ import { Modak } from 'next/font/google';
 import './globals.css';
 import Header from "@/components/Header";
 import MobileBottomNav from "@/components/MobileBottomNav";
+import Elite from "@/components/Elite";
+import Footer1 from "@/components/FooterDesktop";
+import FooterDesktop from "@/components/FooterDesktop";
+
 // import MobileBottomNav from "@/components/MobileBottomNav";
 
 const modak = Modak({
@@ -45,13 +49,7 @@ export default function RootLayout({
           {children}          
         </main>
         {/* Подвал */}
-        <footer className="mx-auto mb-3 mt-8 w-full max-w-7xl px-3 hidden sm:block sm:px-6 lg:px-8">
-          <div className="rounded-xl bg-gray-800 px-4 py-6 text-center text-white sm:px-6">
-            <p>Сайт помощи приютам и поиска домов для животных</p>
-            <p className="mt-2 text-gray-400">Сайт разработан студентами НовГУ</p>
-            <p className="mt-2">Приючу! {new Date().getFullYear()} </p>
-          </div>
-        </footer>
+        <FooterDesktop />
         <MobileBottomNav />
       </body>
     </html>

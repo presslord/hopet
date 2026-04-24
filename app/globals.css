@@ -4,6 +4,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
 @font-face {
   font-family: 'MyCustomFont';
   src: url('https://fonts.googleapis.com/css2?family=Modak&family=Monda:wght@400..700&family=Tektur:wght@400..900&display=swap') format('ttf');

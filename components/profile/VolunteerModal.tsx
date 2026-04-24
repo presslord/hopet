@@ -2,7 +2,7 @@
 
 interface VolunteerModalProps { isOpen: boolean; onClose: () => void; }
 
-export default function ApplicationModal({isOpen, onClose}: VolunteerModalProps) { if (!isOpen) { return null;}
+export default function VolunteerModal({isOpen, onClose}: VolunteerModalProps) { if (!isOpen) { return null;}
     return (
         <div className="fixed inset-0 z-60 flex items-center justify-center backdrop-blur-sm bg-black/45 p-4">
             <div className="absolute inset-0" onClick={onClose} aria-hidden="true"/>
@@ -42,11 +42,11 @@ export default function ApplicationModal({isOpen, onClose}: VolunteerModalProps)
                         </fieldset>
                     <div>
                         <label htmlFor="applicatiome-home-type" className="mb-2 block text-sm font-medium text-gray-700">
-                            Где будет жить питомец?
+                            Был ли у вас опыт работы в приюте?
                         </label>
-                        <select name="home_type" id="application-home-type" className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900">
-                            <option value="house">Частный дом</option>
-                            <option value="appartment">Квартира</option>
+                        <select name="exp" id="application-exp" className="w-full rounded-2xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-gray-900">
+                            <option value="no_exp">Нет</option>
+                            <option value="yes_exp">Да</option>
                         </select>
                     </div>
                     <div>
