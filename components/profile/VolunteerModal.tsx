@@ -12,7 +12,7 @@ export default function VolunteerModal({isOpen, onClose}: VolunteerModalProps) {
                         <p className="text-sm font-medium text-gray-800">Заявка</p>
                         <h2 className="mt-1 text-2xl font-bold text-gray-900">Ответьте на несколько вопросов</h2>
                     </div>
-                    <button type="button" onClick={onClose} className="inline-flex h-10 w-10 items-center justify-center rounded-2xl sm:max-h-full max-h-8 text-center bg-gray-100 text-3xl leading-none text-gray-500 transition hover:bg-gray-200 hover:text-gray-900">&times;</button>
+                    <button type="button" onClick={onClose} className="inline-flex h-10 w-10 items-center justify-center rounded-[100%] sm:max-h-full min-w-10 text-center bg-gray-100 text-3xl leading-none text-gray-500 transition hover:bg-gray-200 hover:text-gray-900">&times;</button>
                 </div>
                 <form className="mt-6 space-y-4">
                     <fieldset className="rounded-2xl border border-gray-200 p-4">
@@ -51,7 +51,7 @@ export default function VolunteerModal({isOpen, onClose}: VolunteerModalProps) {
                     </div>
                     <div>
                         <fieldset className="rounded-2xl border border-gray-200 p-4">
-                            <legend className="px-1 text-sm font-medium text-gray-700">Есть ли у Вас домашние животные?</legend>
+                                <legend className="px-1 text-sm font-medium text-gray-700">Есть ли у Вас питомцы?</legend>
                             <div className="flex flex-col gap-3 text-sm text-gray-700">
                                 <label className="flex items-center gap-3">
                                     <input type="radio" name="other_pets" value="yes"/>

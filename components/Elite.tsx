@@ -43,9 +43,9 @@ export default function Elite({isOpen, onClose}: EliteProps) { if (!isOpen) { re
                                 <h1 className="mt-1 text-2xl font-semibold text-neutral-900">Исаева Светлана</h1>
                             </div>
                         </div>
-                                                    <div className="flex flex-col gap-5 items-center mt-5 sm:flex-row">
+                            <div className="flex flex-col gap-5 items-center mt-5 sm:flex-row">
                                 <div className="relative h-24 w-24 overflow-hidden rounded-2xl bg-gray-100 sm:h-28 sm:w-28">
-                                    <img src={"/profile/avatar.jpg"} alt="Башуков Эдуард"/>
+                                    <img src={"/profile/avatar.jpg"} alt="Башуков Эдуард" />
                                 </div>
                             <div className="text-center sm:text-left">
                                 <p className="text-sm font-medium text-neutral-500">Frontend-разработчик</p>

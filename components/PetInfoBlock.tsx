@@ -41,7 +41,7 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
                 {shelter && (
                 <div className="mt-5 rounded-3xl bg-gray-50 p-4 md:mt-auto md:pt-6 md:p-5">
                     <div className="flex items-center gap-4">
-                        <div className="relative h-16 w-16 overflow-hidden rounded-[100%] bg-gray-100 shadow-2xl">
+                        <div className="relative h-16 w-16 overflow-hidden rounded-[100%] min-w-16 min-h-16 bg-gray-100 shadow-2xl">
                             <Image src={shelter.avatarImage} alt={"Shelter avatar"} fill sizes="64px" className="object-cover" />
                         </div>
                         <div>

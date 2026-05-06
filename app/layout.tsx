@@ -1,23 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Unbounded, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Modak } from 'next/font/google';
-import './globals.css';
 import Header from "@/components/Header";
 import MobileBottomNav from "@/components/MobileBottomNav";
-import Elite from "@/components/Elite";
-import Footer1 from "@/components/FooterDesktop";
 import FooterDesktop from "@/components/FooterDesktop";
 
-// import MobileBottomNav from "@/components/MobileBottomNav";
-
-const modak = Modak({
+const unbounded = Unbounded({
   subsets: ['latin'],
   weight: ['400'],    
   display: 'swap',
-  variable: '--font-modak',
+  variable: '--font-unbounded',
 })
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${geistSans.className} min-h-screen bg-gray-50`}>
+      <body className={`${unbounded.className} min-h-screen bg-gray-50`}>
         {/*Шапка*/}
         <Header />
         {/* Основное содержимое*/}

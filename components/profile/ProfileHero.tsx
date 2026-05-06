@@ -14,7 +14,7 @@ export default function ProfileHero({ profile }: ProfileHeroProps) {
                 </div>
             <div className="text-center sm:text-left">
                 <p className="text-sm font-medium text-neutral-500">Профиль</p>
-                <h1 className="mt-1 text-3xl font-semibold text-neutral-900">{profile.firstName} {profile.lastName}</h1>
+                <h1 className="mt-1 text-3xl font-semibold text-neutral-900 ">{profile.firstName} {profile.lastName}</h1>
             </div>
         </div>
         </section>

@@ -14,12 +14,6 @@
     scrollbar-width: none;
   }
 }
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('https://fonts.googleapis.com/css2?family=Modak&family=Monda:wght@400..700&family=Tektur:wght@400..900&display=swap') format('ttf');
-  font-weight: normal;
-  font-style: normal;
-}
 
 .block1 {
   transition: transform 0.3s ease;
@@ -29,9 +23,6 @@
   transform: scale(1.05);
 }
 
-.custom-font {
-  font-family: 'MyCustomFont', sans-serif;
-}
 
 @theme inline {
   --color-background: var(--background);

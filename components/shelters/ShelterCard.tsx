@@ -18,18 +18,15 @@ export default function ShelterCard( { shelter }: ShelterCardProps) {
                         <p className="text-sm text-white/75">{shelter.city}</p>
                         <h2 className="text-2xl font-semibold text-white">{shelter.name}</h2>
                     </div>
-                    <div className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white backdrop-blur-2xl">с {shelter.founded}</div>
+                    <div className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white backdrop-blur-2xl">{shelter.volunteers} волонтеров</div>
                  </div>
             </div>
             <div className="space-y-5 p-5">
                 <p className="text-sm leading-6 text-gray-600">{shelter.shortDescription}</p>
-                <div className="flex flex-wrap gap-2 text-sm text-gray-500">
-                    <span className="rounded-full bg-amber-50 px-3 py-1 text-amber-700">
-                        {shelter.volunteers} волонтеров
-                    </span>
-                    <span className="rounded-full bg-gray-100 px-3 py-1">{shelter.workingHours}</span>
-                </div>
-                <span className="inline-flex items-center text-sm font-medium text-gray-900">Перейти в приют</span>
+
+                <button className="cursor-pointer border px-3 py-1 rounded-2xl bg-gray-100/50">
+                    <span className="mb-1 inline-flex items-center text-sm font-medium text-gray-900">Перейти в приют</span>
+                </button>
             </div>
         </Link>
     )
