@@ -51,9 +51,19 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
                         </div>
                     </div>
                     <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-                        <Link href={`/shelters/${shelter.id}`} className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-5 py-3 text-sm font-medium text-gray-900 transition hover:bg-gray-100">Перейти в приют</Link>
-                        <button type="button" onClick={() => setIsApplicationOpen(true)} className="inline-flex items-center justify-center rounded-full border border-gray-200 bg-gray-900 px-5 py-3 text-sm font-medium text-white transition hover:bg-gray-700">Забрать животное</button>
-                    </div>
+                            <Link
+                            href={`/shelters/${shelter.id}`}
+                            className="inline-flex items-center justify-center text-sm font-medium rounded-full px-5 py-2.5 border border-[#d86542]/20 bg-[#d86542]/10 text-[#d86542] hover:bg-[#d86542] hover:text-white">
+                                Перейти в приют
+                            </Link>
+                            <button 
+                            type="button"
+                            onClick={() => setIsApplicationOpen(true)}
+                            className="inline-flex items-center justify-center rounded-full border border-[#200f09] bg-[#200f09] text-white px-5 py-3 text-sm font-medium  transition hover:bg-[#200f09]/85 ">
+                                Забрать питомца
+                            </button>
+                            
+                        </div>
                 </div>
             )}
             </div>
