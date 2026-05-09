@@ -12,18 +12,8 @@ const unbounded = Unbounded({
   variable: '--font-unbounded',
 })
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Hopet - Сайт помощи приютам и поиска домов для животных",
+  title: "Приючу! - Сайт помощи приютам и поиска домов для животных",
   description: "",
 };
 

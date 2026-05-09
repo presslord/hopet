@@ -19,12 +19,8 @@ export default function petsPage() {
 
   return (
     <div>
-        <div>
-            <h1>Животные</h1>
-            <p>Найдите себе питомца</p>
-        </div>
-        <FilterButtons onFilterChange={handleFilterChange}></FilterButtons>
-            <PetGrid pets={filteredPets}></PetGrid>
+          <FilterButtons onFilterChange={handleFilterChange}></FilterButtons>
+          <PetGrid pets={filteredPets}></PetGrid>
     </div>
   );
 }

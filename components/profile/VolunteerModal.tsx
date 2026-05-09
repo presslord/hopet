@@ -117,14 +117,13 @@ return (
                     </div>
                     </fieldset>
                 </div>
-
                 <div>
                     <label className="flex items-start gap-3 rounded-2xl border border-gray-200 p-4 text-sm text-gray-700">
                         <input type="checkbox" name="policy" className="mt-1 h-4 min-w-4 rounded border-gray-300 text-gray-900 focus:ring-gray-700"/>
                         <span>Согласие на обработку <Link href="/personalData" className="text-blue-600 hover:text-blue-400 hover:underline">персональных данных</Link></span>
                     </label>
                 </div>
-                 <div className="flex flex-col gap-3 pt-2 sm:flex-row">
+ <div className="flex flex-col gap-3 pt-2 sm:flex-row">
                     <button
                     type="submit"
                     className="inline-flex items-center justify-center rounded-full border border-[#200f09] bg-[#200f09] text-white px-5 py-3 text-sm font-medium  transition hover:bg-[#200f09]/85"
@@ -139,7 +138,6 @@ return (
                     Отмена
                     </button>
                 </div>
-
             </form>
         </section>
     </div>    
