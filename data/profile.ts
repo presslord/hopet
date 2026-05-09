@@ -7,9 +7,9 @@ export interface Profile {
 }
 
 export const profile: Profile = {
-    firstName: "Вадим",
-    lastName: "Карасев",
+    firstName: "Дарья",
+    lastName: "Примерова",
     city: "Великий Новгород",
-    avatar: "/profile/avatar.jpg",
+    avatar: "/profile/avatark.jpg",
     volunteerDays: 9
 }
