@@ -32,9 +32,9 @@ export default function PetDetails( { pet }: PetDetailsProps) {
                 Информация о животном
             </h2>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-                <DetailItem label="Прививки" value={pet.vaccinated ? "Привит(а)" : "Не привит"} status={pet.vaccinated ? "positive" : "negative"} />
+                <DetailItem label="Прививки" value={pet.vaccinated ? "Привит" : "Не привит"} status={pet.vaccinated ? "positive" : "negative"} />
                 <DetailItem label="Приучен к лотку" value={pet.litterTrained ? "Да" : "Нет"} status={pet.litterTrained ? "positive" : "negative"} />
-                <DetailItem label="Стерилизация" value={pet.sterilized ? "Стерилизован(а)" : "Не стерилизован(а)"} status={pet.sterilized ? "positive" : "neutral"} />
+                <DetailItem label="Стерилизация" value={pet.sterilized ? "Стерилизован" : "Не стерилизован"} status={pet.sterilized ? "positive" : "neutral"} />
                 <DetailItem label="Возраст" value={pet.age} status="neutral" />
             </div>
                 <div className="mt-4 md:mt-6">
