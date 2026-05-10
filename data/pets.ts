@@ -35,12 +35,12 @@ export const pets: Pet[] = [
         shelterId: "nadezhda"
     },
     {
-        id: 8, name: "Скиттер", type: "cat", media: { type: "image", src: "/cats/cat8.jpg", alt: "Кот Скиттер" },
-        description: "",
-        age: "",
-        vaccinated: false,
+        id: 8, name: "Буся", type: "cat", media: { type: "image", src: "/cats/skitter.jpg", alt: "Кот Скиттер" },
+        description: "Среднего размера с мягкой бело-серой шерстью, не требующей сложного ухода. Глаза большие, карие По характера спокойная и ласковая, но без навязчивозти  С другими кошками ладит хорошо, если знакомство проходит постепенно. С собаками не тестировалась. Не любит резких движений и громких игр В приют попала после двора. За время нахождения в приюте она набрала вес Ей подойдет квартира без маленьких детей и суеты",
+        age: "2",
+        vaccinated: true,
         litterTrained: false,
-        health: "",
+        health: "Полностьью здорова",
         sterilized: false,
         shelterId: "lyubov"
     },

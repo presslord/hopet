@@ -25,7 +25,7 @@ export default function FilterButtonsProps({ onFilterChange: onFilterChange }: F
                 key={category} 
                 type="button"
                 onClick={() => handleClick(category)}
-                className={`min-w-24 rounded-lg border px-4 py-2 text-sm font-medium shadow-lg transition-all duration-150 sm:px-5 sm:py-2.5 ${activeTab === category
+                className={`cursor-pointer min-w-24 rounded-lg border px-4 py-2 text-sm font-medium shadow-lg transition-all duration-150 sm:px-5 sm:py-2.5 ${activeTab === category
                 ? "bg-[#d86542] text-white"
                 : "text-[#d86542] hover:border-[#d86542]/70 active:bg-[#d86542]"
                 }`}>

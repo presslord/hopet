@@ -15,7 +15,7 @@ return (
                     <h2 className="mt-1 text-2xl font-bold text-gray-900">Забрать {petName} домой</h2>
                     <p className="mt-2 text-sm leading-6 text-gray-600">Заполните заявку, и приют {shelterName} с Вами свяжется</p>
                 </div>
-<button type="button" onClick={onClose} className="inline-flex h-10 w-10 px-5 items-center justify-center rounded-[50%] bg-[#d86542]/10 text-[#d86542] hover:bg-[#d86542]/20 text-xl leading-none transition">
+<button type="button" onClick={onClose} className="cursor-pointer inline-flex h-10 w-10 px-5 items-center justify-center rounded-[50%] bg-[#d86542]/10 text-[#d86542] hover:bg-[#d86542]/20 text-xl leading-none transition">
                     &times;
                 </button>
                 </div>
@@ -86,14 +86,14 @@ return (
                 <div className="flex flex-col gap-3 pt-2 sm:flex-row">
                     <button
                     type="submit"
-                    className="inline-flex items-center justify-center rounded-full border border-[#200f09] bg-[#200f09] text-white px-5 py-3 text-sm font-medium  transition hover:bg-[#200f09]/85"
+                    className="cursor-pointer inline-flex items-center justify-center rounded-full border border-[#200f09] bg-[#200f09] text-white px-5 py-3 text-sm font-medium  transition hover:bg-[#200f09]/85"
                     >
                     Отправить
                     </button>
                     <button
                     type="button"
                     onClick={onClose}
-                    className="inline-flex items-center justify-center text-sm font-medium rounded-full px-5 py-2.5 border border-[#d86542]/20 bg-[#d86542]/10 text-[#d86542] hover:bg-[#d86542] hover:text-white"
+                    className="cursor-pointer inline-flex items-center justify-center text-sm font-medium rounded-full px-5 py-2.5 border border-[#d86542]/20 bg-[#d86542]/10 text-[#d86542] hover:bg-[#d86542] hover:text-white"
                     >
                     Отмена
                     </button>

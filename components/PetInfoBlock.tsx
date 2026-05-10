@@ -59,7 +59,7 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
                             <button 
                             type="button"
                             onClick={() => setIsApplicationOpen(true)}
-                            className="inline-flex items-center justify-center rounded-full border border-[#200f09] bg-[#200f09] text-white px-5 py-3 text-sm font-medium  transition hover:bg-[#200f09]/85 ">
+                            className="cursor-pointer inline-flex items-center justify-center rounded-full border border-[#200f09] bg-[#200f09] text-white px-5 py-3 text-sm font-medium  transition hover:bg-[#200f09]/85 ">
                                 Забрать питомца
                             </button>
                             
