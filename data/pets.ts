@@ -1,5 +1,3 @@
-import { Shelter } from "./shelters";
-
 export interface Pet {
     id: number;
     shelterId: string;

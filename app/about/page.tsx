@@ -9,26 +9,27 @@ import {
 }
 
 from "@/components/ui/carousel"
+import { team } from "@/data/team";
 
 export default function Page() {
     return(<>
             <div className="relative isolate overflow-hidden bg-white w-full h-full sm:py-0 shadow-lg rounded-lg border-none">
-              <img src={"photo"} className="absolute object-center inset-0 w-full h-full object-cover -z-10 brightness-50 shadow-lg"></img>
-              <h1 className="text-center  text-4xl pt-5 font-semibold text-gray-200 sm:pt-7 sm:text-5xl">Наша команда</h1>
+              <img src={"/team-avatars/all-photo.jpg"} className="absolute object-center inset-0 w-full h-full object-cover -z-10 brightness-70 shadow-lg"></img>
+              <h1 className="text-center text-4xl pt-5 font-semibold text-gray-200 sm:pt-7 sm:text-5xl">Наша команда</h1>
               <div className="sm:py-75 py-53"></div>
             </div>
 
             <Carousel className="mt-12 w-full shadow-xl rounded-2xl bg-white">
               <CarouselContent>        
-                {Array.from({ length: 7 }).map((_, index) => (
+                {Array.from({ length: 10 }).map((_, index) => (
                   <div className="w-full h-full flex flex-row text-center px-10" key={index}>
                   <CarouselItem key={index}>
                       <Card className="border-none shadow-none">
                           <CardContent className="relative items-center rounded-2xl">
-                            <img src={`team-avatars/team${index + 1}.jpg`} className="rounded-3xl min-w-65 object-cover object-center"></img>
+                            <img src={team[index].avatar} className="rounded-3xl min-w-65 object-cover object-center"></img>
                               <div className="absolute bottom-4 left-4 right-4 text-xl font-semibold text-white ">
-                                <p>Имя</p>
-                                <p>Длинная фамилия</p>
+                                <p>{team[index].name}</p>
+                                <p>{team[index].lastname}</p>
                               </div>                
                             </CardContent>
                       </Card>
