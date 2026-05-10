@@ -18,13 +18,13 @@ export interface Pet {
 export const pets: Pet[] = [
     {
         id: 1, name: "Снежок", type: "cat", media: { type: "video", src: "/cat.mp4", alt: "Кот Анатолий" },
-        description: "Он молодец Огонь булочка ракета, не бит не крашен, перед продажей на мойке от...Огонь булочка ракета, не бит не крашен, перед продажей на мойке от...Огонь булочка ракета, не бит не крашен, перед продажей на мойке от...мОгонь булочка ракета, не бит не крашен, перед продажей на мойке от...",
+        description: "",
         age: "2",
         vaccinated: true,
         litterTrained: false,
         health: "Огонь булочка ракета, не бит не крашен, перед продажей на мойке от...",
         sterilized: true,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
         {
         id: 11, name: "Юта", type: "dog", media: { type: "image", src: "/dogs/dog3.jpg", alt: "Собак Бибер" },
@@ -34,7 +34,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
     {
         id: 8, name: "Скиттер", type: "cat", media: { type: "image", src: "/cats/cat8.jpg", alt: "Кот Скиттер" },
@@ -44,7 +44,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
     {
         id: 3, name: "Зорро", type: "cat", media: { type: "image", src: "/cats/cat3.jpeg", alt: "Кот Евпатий" },
@@ -54,7 +54,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
         {
         id: 10, name: "Шерлок", type: "dog", media: { type: "image", src: "/dogs/dog2.jpg", alt: "Собак Долик" },
@@ -64,7 +64,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
 
     {
@@ -75,7 +75,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
     {
         id: 6, name: "Кузя", type: "cat", media: { type: "image", src: "/cats/cat6.jpg", alt: "Кот Котэо" },
@@ -85,7 +85,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
         {
         id: 15, name: "Пабло", type: "dog", media: { type: "image", src: "/dogs/dog7.webp", alt: "Собак Саламули" },
@@ -95,7 +95,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
     {
         id: 9, name: "Пончо", type: "dog", media: { type: "image", src: "/dogs/dog1.jpeg", alt: "Собак Егор" },
@@ -105,7 +105,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
     {
         id: 4, name: "Муся", type: "cat", media: { type: "image", src: "/cats/cat4.jpg", alt: "Кот Бобик" },
@@ -115,7 +115,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
         {
         id: 2, name: "Мия", type: "cat", media: { type: "image", src: "/cats/cat2.jpg", alt: "Кот Киррилл" },
@@ -125,7 +125,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "lyubov"
     },
     {
         id: 12, name: "Варька", type: "dog", media: { type: "image", src: "/dogs/dog4.jpeg", alt: "Собак Варька" },
@@ -135,7 +135,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
     {
         id: 13, name: "Граф", type: "dog", media: { type: "image", src: "/dogs/dog5.jpeg", alt: "Собак Кеша" },
@@ -145,7 +145,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
     {
         id: 14, name: "Честер", type: "dog", media: { type: "image", src: "/dogs/dog6.jpg", alt: "Собак Буся" },
@@ -155,7 +155,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "lyubov"
+        shelterId: "nadezhda"
     },
     {
         id: 7, name: "Крекер", type: "cat", media: { type: "image", src: "/cats/cat7.jpg", alt: "Кот Рыбка" },
@@ -165,7 +165,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: "nadezhda"
+        shelterId: "vera"
     },
     {
         id: 16, name: "Голди", type: "dog", media: { type: "image", src: "/dogs/dog8.webp", alt: "Собак Пхали-сували" },
@@ -175,7 +175,7 @@ export const pets: Pet[] = [
         litterTrained: false,
         health: "",
         sterilized: false,
-        shelterId: ""
+        shelterId: "vera"
     },
 
 ];
