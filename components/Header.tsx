@@ -6,7 +6,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 mx-auto w-full max-w-7xl p-6 lg:px-8 mt-3 px-3 hidden sm:block sm:px-6">
         <div className="flex justify-between items-center rounded-xl bg-white/85 p-4 text-black backdrop-blur-xs shadow-lg sm:p-6">
             <Image className="absolute ms-[-30]" src="/logo.svg" width={80} height={20} alt={"logotip"}></Image>
-            <a href="/" className="ms-12 text-xl font-bold">Приючу!</a>
+            <Link href="/" className="ms-12 text-xl font-bold">Приючу!</Link>
             <nav>
             <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-sm sm:text-base">
                 <li><Link href="/" className="transition hover:text-black">Главная</Link></li>

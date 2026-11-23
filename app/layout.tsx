@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Unbounded, Geist, Geist_Mono } from "next/font/google";
+import { Unbounded } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import MobileBottomNav from "@/components/MobileBottomNav";

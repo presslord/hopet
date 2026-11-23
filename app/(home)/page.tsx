@@ -12,7 +12,7 @@ export default function Page() {
 
   const handleFilterChange = (category: Category) => {
     const filtered = pets.filter((pet) => {
-      if (category === "Все") return true;arguments
+      if (category === "Все") return true;
       if (category === "Кошки") return pet.type === "cat";
       if (category === "Собаки") return pet.type === "dog";
       return true;
@@ -27,6 +27,5 @@ export default function Page() {
     </div>
   )
 }
-
 
 
