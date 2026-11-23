@@ -27,11 +27,11 @@ function DetailItem({ label, value, status = "neutral" }: DetailItemProps) {
 export default function PetDetails( { pet }: PetDetailsProps) {
     
     return (
-        <div className="bg-white rounded-lg shadow-lg p-4 md:p-6 custom-font mt-6">
+        <div className="pet-detail-enter pet-detail-enter-delayed bg-white rounded-2xl shadow-lg p-4 md:rounded-lg md:p-6 custom-font mt-4 md:mt-6">
             <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 md:mb-6">
                 Информация о животном
             </h2>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4 md:gap-4">
                 <DetailItem label="Прививки" value={pet.vaccinated ? "Привит" : "Не привит"} status={pet.vaccinated ? "positive" : "negative"} />
                 <DetailItem label="Приучен к лотку" value={pet.litterTrained ? "Да" : "Нет"} status={pet.litterTrained ? "positive" : "negative"} />
                 <DetailItem label="Стерилизация" value={pet.sterilized ? "Стерилизован" : "Не стерилизован"} status={pet.sterilized ? "positive" : "neutral"} />

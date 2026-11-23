@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -14,7 +14,7 @@ import { team } from "@/data/team";
 export default function Page() {
     return(<>
             <div className="relative isolate overflow-hiddenbg-white w-full h-full sm:py-0 rounded-2xl shadow-lg border-none">
-              <img src={"/team-avatars/all-photo.jpg"} className="absolute object-center inset-0 w-full rounded-2xl h-full object-cover -z-10 brightness-70 shadow-lg"></img>
+              <Image src="/team-avatars/all-photo.jpg" alt="Наша команда" fill sizes="(min-width: 1280px) 1280px, 100vw" className="absolute object-center inset-0 rounded-2xl object-cover -z-10 brightness-70 shadow-lg" />
               <h1 className="text-center text-3xl pt-5 font-semibold text-gray-200 sm:pt-7 sm:text-5xl">Наша команда</h1>
               <div className="sm:py-75 py-30"></div>
             </div>
@@ -25,7 +25,7 @@ export default function Page() {
                   <CarouselItem key={index} className="">
                       <Card className="border-none shadow-none">
                           <CardContent className="relative items-center rounded-2xl">
-                            <img src={team[index].avatar} className="rounded-3xl sm:min-w-65 min-w-45 object-cover object-center"></img>
+                            <Image src={team[index].avatar} alt={`${team[index].name} ${team[index].lastname}`} width={260} height={260} className="rounded-3xl sm:min-w-65 min-w-45 object-cover object-center" />
                               <div className="absolute bottom-4 left-4 right-4 text-xl font-semibold text-white ">
                                 <p>{team[index].name}</p>
                                 <p>{team[index].lastname}</p>
@@ -62,5 +62,4 @@ export default function Page() {
             </div>
           </>);    
 }
-
 
