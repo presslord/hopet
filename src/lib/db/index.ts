@@ -19,13 +19,3 @@ export const db = globalForDb.db ?? createDb();
 if (process.env.NODE_ENV !== "production") {
   globalForDb.db = db;
 }
-
-// drizzle.config.ts
-import { defineConfig } from "drizzle-kit";
-
-export default defineConfig({
-  schema: "./src/lib/db/schema.ts",
-  out: "./drizzle",
-  dialect: "sqlite",
-  dbCredentials: { url: process.env.DATABASE_FILE ?? "data/app.db" },
-});
