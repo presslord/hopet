@@ -17,6 +17,4 @@ export const volunteer_applications = sqliteTable('volunteer_applications', {
     note: text().notNull(),
     created_at: text().notNull().default(sql`(CURRENT_TIMESTAMP)`), 
     updated_at: text().notNull().default(sql`(CURRENT_TIMESTAMP)`).$onUpdate(() => sql`(CURRENT_TIMESTAMP)`)
-},
-    (table) => [ uniqueIndex('user_shelter_unique').on(table.user_id, table.shelter_id), ]
-);
+});

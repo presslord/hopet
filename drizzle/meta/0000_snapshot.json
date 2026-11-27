@@ -1,9 +1,131 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "43a69375-f89b-4581-a9ec-0362f8b64ffe",
+  "id": "8cb07327-de34-4b70-82c4-061c54a3ec8a",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
+    "adoption_applications": {
+      "name": "adoption_applications",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "pet_id": {
+          "name": "pet_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "shelter_id": {
+          "name": "shelter_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "phone": {
+          "name": "phone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "message": {
+          "name": "message",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'new'"
+        },
+        "note": {
+          "name": "note",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(CURRENT_TIMESTAMP)"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "(CURRENT_TIMESTAMP)"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "adoption_applications_pet_id_pets_id_fk": {
+          "name": "adoption_applications_pet_id_pets_id_fk",
+          "tableFrom": "adoption_applications",
+          "tableTo": "pets",
+          "columnsFrom": [
+            "pet_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "adoption_applications_shelter_id_shelters_id_fk": {
+          "name": "adoption_applications_shelter_id_shelters_id_fk",
+          "tableFrom": "adoption_applications",
+          "tableTo": "shelters",
+          "columnsFrom": [
+            "shelter_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "status_check": {
+          "name": "status_check",
+          "value": "\"adoption_applications\".\"status\" IN ('new', 'in_review', 'approved', 'rejected')"
+        }
+      }
+    },
     "users": {
       "name": "users",
       "columns": {
@@ -479,128 +601,6 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "adoption_applications": {
-      "name": "adoption_applications",
-      "columns": {
-        "id": {
-          "name": "id",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": true,
-          "autoincrement": true
-        },
-        "pet_id": {
-          "name": "pet_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "shelter_id": {
-          "name": "shelter_id",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "name": {
-          "name": "name",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "email": {
-          "name": "email",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "phone": {
-          "name": "phone",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false
-        },
-        "message": {
-          "name": "message",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "status": {
-          "name": "status",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "'new'"
-        },
-        "note": {
-          "name": "note",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "(CURRENT_TIMESTAMP)"
-        },
-        "updated_at": {
-          "name": "updated_at",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": true,
-          "autoincrement": false,
-          "default": "(CURRENT_TIMESTAMP)"
-        }
-      },
-      "indexes": {},
-      "foreignKeys": {
-        "adoption_applications_pet_id_pets_id_fk": {
-          "name": "adoption_applications_pet_id_pets_id_fk",
-          "tableFrom": "adoption_applications",
-          "tableTo": "pets",
-          "columnsFrom": [
-            "pet_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        },
-        "adoption_applications_shelter_id_shelters_id_fk": {
-          "name": "adoption_applications_shelter_id_shelters_id_fk",
-          "tableFrom": "adoption_applications",
-          "tableTo": "shelters",
-          "columnsFrom": [
-            "shelter_id"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
-      "compositePrimaryKeys": {},
-      "uniqueConstraints": {},
-      "checkConstraints": {
-        "status_check": {
-          "name": "status_check",
-          "value": "\"adoption_applications\".\"status\" IN ('new', 'in_review', 'approved', 'rejected')"
-        }
-      }
-    },
     "volunteer_applications": {
       "name": "volunteer_applications",
       "columns": {
@@ -706,14 +706,6 @@
           "name": "volunteer_applications_email_unique",
           "columns": [
             "email"
-          ],
-          "isUnique": true
-        },
-        "user_shelter_unique": {
-          "name": "user_shelter_unique",
-          "columns": [
-            "user_id",
-            "shelter_id"
           ],
           "isUnique": true
         }
