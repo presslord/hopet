@@ -13,6 +13,7 @@ return(
             <Link href={"/about"} className="flex justify-center my-2 text-gray-400 hover:underline cursor-pointer">Сайт разработан студентами НовГУ</Link>
             <Link href="/policypage" className="text-gray-400 hover:underline cursor-pointer">Политика конфиденциальности</Link>
             <p className="mt-2">Приючу! {new Date().getFullYear()} ©</p>
+            <p className="text-xs mt-4">Сайт несет исключительно ознакомительный характер, делается в рамках проектной деятельности в университете</p>
           </div>
         </footer>
       <Elite isOpen={isApplicationOpen}  onClose={() => setIsApplicationOpen(false)} />
