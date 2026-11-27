@@ -10,8 +10,8 @@ export default function PetsPage() {
     const handleFilterChange = (category: Category) => {
     const filtered = pets.filter((pet) => {
       if (category === "Все") return true;
-      if (category === "Кошки") return pet.type === "cat";
-      if (category === "Собаки") return pet.type === "dog";
+      if (category === "Кошки") return pet.species === "cat";
+      if (category === "Собаки") return pet.species === "dog";
       return true;
     });
     setFilteredPets(filtered);

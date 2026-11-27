@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import ShelterProfileHero from "@/components/shelters/ShelterProfileHero";
 import { shelters } from "@/data/shelters";
 import { pets } from "@/data/pets";
-import ShelterStats from "@/components/shelters/ShelterStats";
 import ShelterContactCard from "@/components/shelters/ShelterContactCard";
 import ShelterPetsSection from "@/components/shelters/ShelterPetsSection";
 
@@ -14,11 +13,11 @@ interface ShelterPageProps {
 
 export default async function ShelterPage({ params }: ShelterPageProps) {
     const { id } = await params;
-    const shelter = shelters.find((item) => item.id === id);
+    const shelter = shelters.find((item) => item.id === Number(id));
     if (!shelter) {
         notFound();
     }
-    const shelterPets = pets.filter((pet) => pet.shelterId === shelter.id);
+    const shelterPets = pets.filter((pet) => pet.shelter_id === shelter.id);
 
     return (
         <div className="space-y-8 sm:space-y-10">
@@ -30,7 +29,6 @@ export default async function ShelterPage({ params }: ShelterPageProps) {
                     <p className="mx-auto max-w-3xl text-sm leading-7 text-gray-600 sm:text-base">{shelter.description}</p>
                 </div>        
                 <div className="grid gap-4 lg:grid-cols-[1.6fr_1fr]">
-                    <ShelterStats founded={shelter.founded} volunteers={shelter.volunteers} petsCount={shelterPets.length} />
                     <ShelterContactCard shelter={shelter} />
                 </div>
             </div>
