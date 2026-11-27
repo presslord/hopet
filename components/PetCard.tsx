@@ -17,7 +17,11 @@ export default function PetCard({ pet }: PetCardProps) {
     const router = useRouter();
     const href = `/pets/${pet.id}`;
 
-    const mediaItem = petMedia.find((m) => m.pet_id === pet.id);
+    const mediaItem = petMedia.find(
+        (m) => m.pet_id === pet.id && m.url?.trim()
+    );
+
+    const imageSrc = mediaItem?.url.trim() || "/cats/cat1.jpg";
 
 
     const handleOpen = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -87,10 +91,10 @@ export default function PetCard({ pet }: PetCardProps) {
         mediaClone.className = "pet-open-panel-media";
 
     
-            const image = document.createElement("img");
-            image.src = mediaItem?.url ?? "/images/pets/placeholder.jpg";
-            image.className = "pet-open-panel-media-element";
-            mediaClone.appendChild(image);
+        const image = document.createElement("img");
+        image.src = imageSrc;
+        image.className = "pet-open-panel-media-element";
+        mediaClone.appendChild(image);
 
         const content = document.createElement("div");
         content.className = "pet-open-panel-content pet-profile-content";
@@ -254,10 +258,7 @@ export default function PetCard({ pet }: PetCardProps) {
             <div data-pet-card-shell className="group relative cursor-pointer transition-transform duration-300 ease-out active:scale-[0.97] sm:hover:-translate-y-1">
                     <div className="flex h-full flex-col">
                         <div data-pet-card-media className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-200 shadow-lg transition-all duration-300 ease-out group-hover:shadow-2xl">
-                            (
-                                <Image src={mediaItem?.url ?? "/images/pets/placeholder.jpg"} alt={pet.name} 
-                                fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-center" />
-                            )
+                                <Image src={imageSrc} alt={pet.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-center" />
                             
                             <div className="absolute inset-0 bg-gradient-to-t from-[#180803] via-[#180803]/20 to-transparent" />
                             <div className="absolute bottom-4 left-4 right-4">
