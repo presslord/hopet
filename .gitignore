@@ -39,6 +39,9 @@ data/*.db
 # vercel
 .vercel
 
+# package-lock
+package-lock.json
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
