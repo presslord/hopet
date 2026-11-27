@@ -6,15 +6,23 @@ import type { MouseEvent } from "react";
 import { useRouter } from "next/navigation";
 import { Pet } from "@/data/pets";
 import { shelters } from "@/data/shelters";
+import { petMedia } from "@/data/pet_media";
 
 interface PetCardProps {
     pet: Pet;
 }
 
 export default function PetCard({ pet }: PetCardProps) {
-    const shelter = shelters.find((item) => item.id === pet.shelterId);
+    const shelter = shelters.find((item) => item.id === pet.shelter_id);
     const router = useRouter();
     const href = `/pets/${pet.id}`;
+
+    const mediaItem = petMedia.find(
+        (m) => m.pet_id === pet.id && m.url?.trim()
+    );
+
+    const imageSrc = mediaItem?.url.trim() || "/cats/cat1.jpg";
+
 
     const handleOpen = (event: MouseEvent<HTMLAnchorElement>) => {
         if (
@@ -82,22 +90,11 @@ export default function PetCard({ pet }: PetCardProps) {
         const mediaClone = document.createElement("div");
         mediaClone.className = "pet-open-panel-media";
 
-        if (pet.media.type === "video") {
-            const video = document.createElement("video");
-            video.src = pet.media.src;
-            video.autoplay = true;
-            video.muted = true;
-            video.loop = true;
-            video.playsInline = true;
-            video.className = "pet-open-panel-media-element";
-            mediaClone.appendChild(video);
-        } else {
-            const image = document.createElement("img");
-            image.src = pet.media.src;
-            image.alt = pet.media.alt;
-            image.className = "pet-open-panel-media-element";
-            mediaClone.appendChild(image);
-        }
+    
+        const image = document.createElement("img");
+        image.src = imageSrc;
+        image.className = "pet-open-panel-media-element";
+        mediaClone.appendChild(image);
 
         const content = document.createElement("div");
         content.className = "pet-open-panel-content pet-profile-content";
@@ -111,7 +108,7 @@ export default function PetCard({ pet }: PetCardProps) {
 
         const meta = document.createElement("p");
         meta.className = "pet-open-panel-meta pet-profile-meta";
-        meta.textContent = `${pet.type === "cat" ? "Кошка" : "Собака"}, ${pet.age} год(а)`;
+        meta.textContent = `${pet.species === "cat" ? "Кошка" : "Собака"}, ${pet.age} год(а)`;
 
         contentHeader.append(title, meta);
 
@@ -129,11 +126,11 @@ export default function PetCard({ pet }: PetCardProps) {
             const avatar = document.createElement("div");
             avatar.className = "pet-profile-shelter-avatar bg-gray-100 shadow-2xl";
 
-            const avatarImage = document.createElement("img");
-            avatarImage.src = shelter.avatarImage;
-            avatarImage.alt = shelter.name;
-            avatarImage.className = "pet-open-shelter-avatar-image";
-            avatar.appendChild(avatarImage);
+            // const avatarImage = document.createElement("img");
+            // avatarImage.src = shelter.avatarImage;
+            // avatarImage.alt = shelter.name;
+            // avatarImage.className = "pet-open-shelter-avatar-image";
+            // avatar.appendChild(avatarImage);
 
             const shelterText = document.createElement("div");
             shelterText.className = "pet-open-shelter-text";
@@ -148,7 +145,7 @@ export default function PetCard({ pet }: PetCardProps) {
 
             const details = document.createElement("p");
             details.className = "pet-open-shelter-details pet-profile-shelter-details";
-            details.textContent = `${shelter.city} | ${shelter.workingHours}`;
+            details.textContent = `${shelter.city}`;
 
             shelterText.append(label, name, details);
             shelterInfo.append(avatar, shelterText);
@@ -261,14 +258,7 @@ export default function PetCard({ pet }: PetCardProps) {
             <div data-pet-card-shell className="group relative cursor-pointer transition-transform duration-300 ease-out active:scale-[0.97] sm:hover:-translate-y-1">
                     <div className="flex h-full flex-col">
                         <div data-pet-card-media className="relative aspect-square w-full overflow-hidden rounded-lg bg-gray-200 shadow-lg transition-all duration-300 ease-out group-hover:shadow-2xl">
-                            {pet.media.type === "video" ? (
-                                <video className="h-full w-full object-cover object-center ..." autoPlay muted loop playsInline>
-                                    <source src={pet.media.src} type="video/mp4"></source>  
-                                </video>
-                            ) : (
-                                <Image src={pet.media.src} alt={pet.media.alt} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-center" />
-                                
-                            )}
+                                <Image src={imageSrc} alt={pet.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover object-center" />
                             
                             <div className="absolute inset-0 bg-gradient-to-t from-[#180803] via-[#180803]/20 to-transparent" />
                             <div className="absolute bottom-4 left-4 right-4">
