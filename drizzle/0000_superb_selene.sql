@@ -1,20 +1,3 @@
-CREATE TABLE `adoption_applications` (
-	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
-	`pet_id` integer NOT NULL,
-	`shelter_id` integer NOT NULL,
-	`name` text NOT NULL,
-	`email` text NOT NULL,
-	`phone` text NOT NULL,
-	`message` text,
-	`status` text DEFAULT 'new' NOT NULL,
-	`note` text,
-	`created_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL,
-	`updated_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL,
-	FOREIGN KEY (`pet_id`) REFERENCES `pets`(`id`) ON UPDATE no action ON DELETE no action,
-	FOREIGN KEY (`shelter_id`) REFERENCES `shelters`(`id`) ON UPDATE no action ON DELETE no action,
-	CONSTRAINT "status_check" CHECK("adoption_applications"."status" IN ('new', 'in_review', 'approved', 'rejected'))
-);
---> statement-breakpoint
 CREATE TABLE `users` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`email` text NOT NULL,
@@ -84,6 +67,23 @@ CREATE TABLE `volunteers` (
 );
 --> statement-breakpoint
 CREATE UNIQUE INDEX `user_shelter_unique` ON `volunteers` (`user_id`,`shelter_id`);--> statement-breakpoint
+CREATE TABLE `adoption_applications` (
+	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
+	`pet_id` integer NOT NULL,
+	`shelter_id` integer NOT NULL,
+	`name` text NOT NULL,
+	`email` text NOT NULL,
+	`phone` text NOT NULL,
+	`message` text,
+	`status` text DEFAULT 'new' NOT NULL,
+	`note` text,
+	`created_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL,
+	`updated_at` text DEFAULT (CURRENT_TIMESTAMP) NOT NULL,
+	FOREIGN KEY (`pet_id`) REFERENCES `pets`(`id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`shelter_id`) REFERENCES `shelters`(`id`) ON UPDATE no action ON DELETE no action,
+	CONSTRAINT "status_check" CHECK("adoption_applications"."status" IN ('new', 'in_review', 'approved', 'rejected'))
+);
+--> statement-breakpoint
 CREATE TABLE `volunteer_applications` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`user_id` integer NOT NULL,

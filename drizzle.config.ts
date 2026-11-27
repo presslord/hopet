@@ -1,8 +1,8 @@
 import { defineConfig } from "drizzle-kit";
 
 export default defineConfig({
-  schema: "./src/lib/db/schema",
+  schema: "./src/lib/db/schema/index.ts",
   out: "./drizzle",
   dialect: "sqlite",
-  dbCredentials: { url: process.env.DATABASE_FILE ?? "data/app.db" },
+  dbCredentials: { url: "data/app.db" },
 });
