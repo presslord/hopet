@@ -24,8 +24,8 @@ export const shelters: Shelter[] = [
         address: "ул. Большая Санкт-Петербургская",
         phone: "+7 (999) 123-45-67",
         email: "lyubov-shelter@lyubov-shelter.ru",
-        logo_url: "/images/shelters/lyubov-logo.png",
-        cover_url: "/images/shelters/lyubov-cover.jpg",
+        logo_url: "/shelters/shlter-logo1.png",
+        cover_url: "/shelters/shelter-cover1.avif",
         is_published: "0",
         created_at: " ",
         updated_at: " "
@@ -39,8 +39,8 @@ export const shelters: Shelter[] = [
         address: "ул. Большая Московская",
         phone: "+7 (812) 987-65-43",
         email: "vernydrug@vernydrug.ru",
-        logo_url: "/images/shelters/verny-logo.png",
-        cover_url: "/images/shelters/verny-cover.jpg",
+        logo_url: "/shelters/shelter-logo2.jpg",
+        cover_url: "/shelters/shelter-cover2.jpeg",
         is_published: "1",
         created_at: " ",
         updated_at: " "
@@ -55,8 +55,8 @@ export const shelters: Shelter[] = [
         address: "ул. Советской Армии",
         phone: "+7 (843) 555-35-35",
         email: "lapki-kzn@lapki-kzn.ru",
-        logo_url: "/images/shelters/lapki-logo.png",
-        cover_url: "/images/shelters/lapki-cover.jpg",
+        logo_url: "/shelters/shelter-logo3.png",
+        cover_url: "/shelters/shelter-cover3.jpg",
         is_published: "1",
         created_at: " ",
         updated_at: " "

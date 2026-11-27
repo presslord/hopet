@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Shelter } from "@/data/shelters";
 import ApplicationModal from "@/components/ApplicationModal";
 import { useEffect, useState } from "react";
+import { petMedia } from "@/data/pet_media";
 
 interface PetInfoBlockProps {
     pet : Pet;
@@ -44,30 +45,31 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
         };
     }, [pet.id]);
 
+    const mediaItem = petMedia.find(
+        (m) => m.pet_id === pet.id && m.url?.trim()
+    );
+
+    const imageSrc = mediaItem?.url.trim() || "/cats/cat1.jpg";
+
     return (
         <>
     <div className="pet-profile-card">
         <div className="pet-profile-grid">
             <div className="pet-profile-media bg-gray-200">
-                {pet.media.type === "video" ? (
-                <video className="h-full w-full object-center object-cover" autoPlay muted loop playsInline>
-                    <source src={pet.media.src} type ="video/mp4" />
-                    </video>
-                ) : (
-                    <Image
-                    src={pet.media.src}
-                    alt={pet.media.alt}
-                    fill
-                    sizes="(min-width: 640px) 50vw, 100vw"
-                    className="object-center object-cover" />
-                )}
+            <Image
+                src={imageSrc}
+                alt={pet.name}
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-center object-cover"
+            />
 
             </div>
 
             <div className="pet-profile-content">
                 <h1 className="pet-profile-title">{pet.name}</h1>
                 <p className="pet-profile-meta">
-                    {pet.type === "cat" ? "Кошка" : "Собака"}, {pet.age} год(а)
+                    {pet.species === "cat" ? "Кошка" : "Собака"}, {pet.age} год(а)
                 </p>
                 <div className="pet-profile-description">
                     <p>{pet.description}</p>
@@ -76,12 +78,12 @@ export default function PetInfoBlock({ pet, shelter }: PetInfoBlockProps) {
                 <div className="pet-profile-shelter-card">
                     <div className="pet-profile-shelter-info">
                         <div className="pet-profile-shelter-avatar bg-gray-100 shadow-2xl">
-                            <Image src={shelter.avatarImage} alt={"Shelter avatar"} fill sizes="64px" className="object-cover" />
+                            <Image src={shelter.logo_url} alt={shelter.name} fill sizes="64px" className="object-cover"/>
                         </div>
                         <div>
                             <p className="pet-profile-shelter-label">Приют</p>
                             <h2 className="pet-profile-shelter-name">{shelter.name}</h2>
-                            <p className="pet-profile-shelter-details">{shelter.city} | {shelter.workingHours}</p>
+                            <p className="pet-profile-shelter-details">{shelter.city}</p>
                         </div>
                     </div>
                     <div className="pet-profile-actions">
