@@ -11,7 +11,7 @@ export default function PetPage() {
     const params = useParams();
     const petId = Number(params.id);
     const pet = pets.find((p) => p.id === petId);
-    const shelter = pet ? shelters.find((item) => item.id === pet.shelterId) : undefined;
+    const shelter = pet ? shelters.find((item) => item.id === pet.shelter_id) : undefined;
     if (!pet) {
         return (
             <div className="max-w-360 mx-auto px-6 py-12">
