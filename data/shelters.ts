@@ -1,64 +1,64 @@
 export interface Shelter {
-    id: string;
+    id: number;
+    slug: string;
     name: string;
+    description: string;
     city: string;
-    adress: string;
+    address: string;
     phone: string;
     email: string;
-    workingHours: string;
-    coverImage: string;
-    avatarImage: string;
-    shortDescription: string;
-    description: string;
-    founded: string;
-    volunteers: number;
+    logo_url: string;
+    cover_url: string;
+    is_published: "0" | "1";
+    created_at: string;
+    updated_at: string;
 }
 
 export const shelters: Shelter[] = [
     {
-        id: "nadezhda",
-        name: "Надежда",
-        city: "Великий Новгород",
-        adress: "Ул.Большая д.3",
-        phone: "+7-910-600-30-20",
-        email: "s260441@novsu.ru",
-        workingHours: "Пн-Пт 09:00-21:00",
-        coverImage: "/shelters/shelter-cover1.avif",
-        avatarImage: "/shelters/shelter-logo2.jpg",
-        shortDescription: "Городской приют для кошек и собак",
-        description: "Ориентирован на животных, попавших в тяжелые жизненные условия. В приюте оказывают помощь бездомным животным и помогают каждому найти хозяина.",
-        founded: "1892",
-        volunteers: 3,
+        id: 1,
+        slug: "lyubov",
+        name: "Приют «Любовь и забота»",
+        description: "Небольшой домашний приют для кошек. Лечим, стерилизуем и ищем ответственных хозяев для пушистых друзей.",
+        city: "Велкиий Новгород",
+        address: "ул. Большая Санкт-Петербургская",
+        phone: "+7 (999) 123-45-67",
+        email: "lyubov-shelter@lyubov-shelter.ru",
+        logo_url: "/images/shelters/lyubov-logo.png",
+        cover_url: "/images/shelters/lyubov-cover.jpg",
+        is_published: "0",
+        created_at: " ",
+        updated_at: " "
     },
     {
-        id: "lyubov",
-        name: "Новый дом",
+        id: 2,
+        slug: "verny-drug",
+        name: "Центр помощи животным «Верный друг»",
+        description: "Крупный приют для собак разных пород и размеров. Проводим кинологические занятия и дни открытых дверей каждые выходные.",
         city: "Великий Новгород",
-        adress: "Ул.Малая д.1А",
-        phone: "+7-910-600-30-20",
-        email: "s260441@novsu.ru",
-        workingHours: "Пн-Пт 09:00-21:00",
-        coverImage: "/shelters/shelter-logos2.jpg",
-        avatarImage: "/shelters/Image.png",
-        shortDescription: "Городской приют для кошек и собак",
-        description: "Ориентирован на животных, попавших в тяжелые жизненные условия. В приюте оказывают помощь бездомным животным и помогают каждому найти хозяина.",
-        founded: "1999",
-        volunteers: 3,
+        address: "ул. Большая Московская",
+        phone: "+7 (812) 987-65-43",
+        email: "vernydrug@vernydrug.ru",
+        logo_url: "/images/shelters/verny-logo.png",
+        cover_url: "/images/shelters/verny-cover.jpg",
+        is_published: "1",
+        created_at: " ",
+        updated_at: " "
     },
 
     {
-        id: "vera",
-        name: "Вера",
+        id: 3,
+        slug: "lapki",
+        name: "Фонд «Мягкие лапки»",
+        description: "Помогаем котятам и взрослым кошкам, попавшим в беду. Работаем по системе временных передержек.",
         city: "Великий Новгород",
-        adress: "Ул.Генералов 14",
-        phone: "+7-910-600-30-20",
-        email: "s260441@novsu.ru",
-        workingHours: "Ежедневно 09:00-21:00",
-        coverImage: "/shelters/shelter-cover3.webp",
-        avatarImage: "/shelters/shelter-logo3.png",
-        shortDescription: "Городской приют для кошек и собак",
-        description: "Ориентирован на животных, попавших в тяжелые жизненные условия. В приюте оказывают помощь бездомным животным и помогают каждому найти хозяина.",
-        founded: "2025",
-        volunteers: 3,
+        address: "ул. Советской Армии",
+        phone: "+7 (843) 555-35-35",
+        email: "lapki-kzn@lapki-kzn.ru",
+        logo_url: "/images/shelters/lapki-logo.png",
+        cover_url: "/images/shelters/lapki-cover.jpg",
+        is_published: "1",
+        created_at: " ",
+        updated_at: " "
     }
 ]
