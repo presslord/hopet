@@ -24,8 +24,8 @@ export default function Page() {
                   <div className="w-full h-full flex flex-row text-center px-10" key={index}>
                   <CarouselItem key={index} className="">
                       <Card className="border-none shadow-none">
-                          <CardContent className="relative items-center rounded-2xl">
-                            <Image src={team[index].avatar} alt={`${team[index].name} ${team[index].lastname}`} width={260} height={260} className="rounded-3xl sm:min-w-65 min-w-45 object-cover object-center" />
+                          <CardContent className="relative items-center rounded-2xl w-65 h-95">
+                            <Image src={team[index].avatar} alt={`${team[index].name} ${team[index].lastname}`} fill className="rounded-3xl sm:min-w-65 min-w-45 object-cover object-center" />
                               <div className="absolute bottom-4 left-4 right-4 text-xl font-semibold text-white ">
                                 <p>{team[index].name}</p>
                                 <p>{team[index].lastname}</p>

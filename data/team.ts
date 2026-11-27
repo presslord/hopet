@@ -21,9 +21,9 @@ export const team: Team[] = [
         avatar: "/team-avatars/team3.jpg"
     },
     {
-        name: "Даниил",
-        lastname: "Сорока",
-        avatar: "/team-avatars/team4.jpg"
+        name: "Илья",
+        lastname: "Родионов",
+        avatar: "/team-avatars/team77.jpg"
     },
     {
         name: "Егор",
